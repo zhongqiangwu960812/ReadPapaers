@@ -72,6 +72,9 @@
 这里面存放推荐系统相关的一些papers
 ## [SpatiotemporalSeriesPrediction](https://github.com/zhongqiangwu960812/ReadPapaers/tree/master/SpatiotemporalSeriesPrediction)
 这里面存放时空序列预测相关的一些papers
+## [POIRecommend](https://github.com/zhongqiangwu960812/ReadPapaers/tree/master/POIRecommend)
+这这里面存放POI推荐的一些papers
+
 
 
 
