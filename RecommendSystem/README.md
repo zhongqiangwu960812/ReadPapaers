@@ -19,6 +19,7 @@
 * **内容**：这个是在FM的基础上引入了特征域感知的概念， 上面的FM模型在学习隐向量的过程中， 综合考虑了所有特征域里面的隐向量， 也就是每个特征值只学习到了一个隐向量， 这样在进行两两特征交互的时候， 用的是他们的内积。 而FFM在这个基础上进行了改进， 认为不同的特征域里面的隐向量不应该相同， 所以**FFM为每个特征值学习了f个隐向量， 这里的f就是特征域的个数。 针对不同特征域里面的特征与某个特征值交叉会使用不同的隐向量进行内积作为交叉的权重**。 这里论文里面考虑的就是交互的时候， 由于交互特征属于不同的域， 统一用相同的隐向量进行计算可能不太合理， 比如(EPSN, Nike)和(EPSN, Male), 对于出版社EPSN来说， 与广告商Nike和性别的交互， 如果是FM， EPSN会是一个隐向量， 而FFM的话， 会分别针对广告商属性和性别属性学习两个隐向量， 这样交互的时候， 前面那个用广告属性的隐向量， 后者用Male的隐向量， 这样可能会合理一些。毕竟广告商和性别相差比较大， 统一学习的话效果不太好。  这篇论文的创新就是FFM， 先介绍了FM的不足， 引出FFM模型， 然后介绍了FFM模型的原理， 训练方式， 最后实验过程探索了一些超参数， 训练方式的影响， 以及速度方面， 和其他模型的比较， 不同数据集的实验等。
 * **借鉴**： 这篇论文可以感觉人家的实验设计挺全的， 一读就是做了很多工作， 所以自己写论文的时候也要考虑全面性
 
+
 ## 4. [facebook-GBDT-LR_2014](https://github.com/zhongqiangwu960812/ReadPapaers/blob/master/RecommendSystem/facebook-GBDT-LR_2014.pdf)
 
 * **简介**： 这是2014年来自Facebook的一篇文章
@@ -26,3 +27,14 @@
 * **借鉴**： 这篇文章后面的实践部分没有细读， 详情可以参考下面这篇文章。
 
 * **链接**：[GBDT+LR](https://blog.csdn.net/Yasin0/article/details/100737222)
+
+
+## 5. [DeepCross_2016](https://github.com/zhongqiangwu960812/ReadPapaers/blob/master/RecommendSystem/DeepCross_2016.pdf)
+* **简介**： 这是2016年来自微软的一篇文章
+* **内容**： 
+* **借鉴**： 
+* **链接**： [DeepCross文章导读]()
+
+
+# 模型复现
+大部分模型复现和详细的解释可以参考这个GitHub项目：[https://github.com/zhongqiangwu960812/AI-RecommenderSystem](https://github.com/zhongqiangwu960812/AI-RecommenderSystem)
