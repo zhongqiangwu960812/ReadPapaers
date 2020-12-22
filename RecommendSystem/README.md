@@ -45,28 +45,28 @@
 * **借鉴**： 这个模型涉及到的技术也比较基础，思路不是很复杂， 所以也比较利于学习， 涉及的特征只有用户和物品的交互信息， 也就是用户向量和物品向量， 没有其他的特征在里面， 而处理过程，就是通过embedding得到各自的隐向量， 然后各自的隐向量进入不同的模型进行计算。   借鉴的地方就是人家的实验部分抛出了四个问题， 然后一一解决， 非常全面， 还有就是pre-training的思路。 这篇文章感觉质量还是很不错的。读起来， 要比前面的轻松。
 * **链接**： [AI上推荐 之 NeuralCF与PNN模型(改变特征交叉方式）](https://blog.csdn.net/wuzhongqiang/article/details/108985457)
 
-## 7. [Product-based Neural Networks for User Response_2016]()
+## 7. [Product-based Neural Networks for User Response_2016](https://arxiv.org/abs/1611.00144)
 
 * **简介**： 这是2016年上海交大团队在ICDM会议上提出的一个模型
 * **内容**： 这个模型也是为了能够更好的加入多组特征， 进行更好的特征交叉提出的一个模型， 这个模型相和Deep Crossing模型非常相似， 唯一的区别就是在于用Product layer代替了DeepCrossing中的Stacking layer，这样就避免了之前不同特征的embedding向量简单堆叠和交互，而是变得有了针对性。 这里面的的Product layer层就是非常大的亮点， 根据特征之间的交叉方式不同， 这里又分成了IPNN和OPNN两种模型。最后也是通过实验验证了提出的模型有效性。
 * **借鉴**： 这篇文章当时读的时候，理解起来还是有一定困难的，借鉴的地方感觉是特征交叉的这两种思路。
 * **链接**：[AI上推荐 之 NeuralCF与PNN模型(改变特征交叉方式）](https://blog.csdn.net/wuzhongqiang/article/details/108985457)
 
-## [8. wide&deep_2016]()
+## [8. wide&deep_2016](https://arxiv.org/abs/1606.07792)
 
 * **简介**： 这是2016年谷歌提出的模型， 这也是组合模型的开端， 将线性模型和DNN模型很好的组合起来， 在提高泛化能力的同时，兼顾模型的记忆性
 * **内容**： 这篇文章提供了一种组合模型的思路， 使得模型能够拥有泛化和记忆能力，wide部分使用了比较简单的逻辑回归， 而Deep部分使用的普通的DNN模型， 所以每个分部分并不是新模型， 这篇paper首先介绍了这个模型的架构，然后介绍了谷歌的推荐系统， 感觉后者也挺重要的。
 * **借鉴**： 这种模型组合的思路需要学习一下，互补的东西组合起来会产生很大的作用。 另外感觉后面介绍wide部分接收的特征也需要学习一下， 记忆这块的特征并不是随便输入的。
 * **链接**：[AI上推荐 之 Wide&Deep与Deep&Cross模型](https://blog.csdn.net/wuzhongqiang/article/details/109254498)
 
-## 9. [Deep&Cross Network for Ad Click Predictions_2017]()
+## 9. [Deep&Cross Network for Ad Click Predictions_2017](https://arxiv.org/abs/1708.05123)
 
 * **简介**： 这是2017年斯坦福大学和谷歌的研究人员在ADKDD上提出的模型
 * **内容**： 该模型针对W&D的wide部分进行了改进， 因为Wide部分有一个不足就是需要人工进行特征的组合筛选， 过程繁琐且需要经验， 2阶的FM模型在线性的时间复杂度中自动进行特征交互，但是这些特征交互的表现能力并不够，并且随着阶数的上升，模型复杂度会大幅度提高。于是乎，**作者用一个Cross Network替换掉了Wide部分，来自动进行特征之间的交叉，并且网络的时间和空间复杂度都是线性的。** 通过与Deep部分相结合，构成了深度交叉网络（Deep & Cross Network），简称DCN。这篇文章的亮点就是Cross网络。
 * **借鉴**： 同样是这里的交叉思路， 引入了一个交叉网络进行了特征之间的交叉操作
 * **链接**： [AI上推荐 之 Wide&Deep与Deep&Cross模型](https://blog.csdn.net/wuzhongqiang/article/details/109254498)
 
-## [10. Deep Learning over Multi-field Categorical Data_2016]()
+## [10. Deep Learning over Multi-field Categorical Data_2016](https://arxiv.org/abs/1601.02376)
 
 * **简介**： 这是2016年多伦多大学学院的研究人员提出的模型
 * **内容**： CTR预测任务中，针对传统的线性模型LR不能够利用特征之间的交互信息， 而一些非线性模型，如FM，表达能力不够强的问题， 在深度学习时代，该paper提出了两种组合模型的思路，并提出了一些有效的预训练方法， 一种模型是FM+DNN的组合， 叫做FNN模型， 底层是FM， 上层是多层的神经网络， 另一个模型是SNN模型， 底层是一个全连接， 上层是DNN。 这两种模型都采用了预训练的方式，也就是模型的初始化权重是已经训练好的权重，只需要用新的数据集对模型的权重微调，这样可以加快训练速度。 FNN模型和SNN模型的不同之处就是底层的这个模型， 一个是FM， 一个是全连接， SNN的底层全连接用的是限制性的玻尔兹曼机和去噪的自动编码器两种不同的初始化方式，为了减少复杂度，还对one-hot之后， 0的那些单元进行了负采样的操作。最后进行了一系列实验，对比提出的模型和之前的LR， FM的效果，证明了提出模型的有效性。
