@@ -161,6 +161,10 @@
 
 * 链接：[AI上推荐 之 DSIN模型(阿里DIEN之上的再探索)](https://blog.csdn.net/wuzhongqiang/article/details/114500619)
 
+## 17. xDeepFM
+
+
+
 # 模型复现
 
 大部分模型复现和详细的解释可以参考这个GitHub项目：[https://github.com/zhongqiangwu960812/AI-RecommenderSystem](https://github.com/zhongqiangwu960812/AI-RecommenderSystem)
