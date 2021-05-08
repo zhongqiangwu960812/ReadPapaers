@@ -135,8 +135,6 @@
 
 * 链接：[AI上推荐 之 AFM与DIN模型（当推荐系统遇上了注意力机制）](https://blog.csdn.net/wuzhongqiang/article/details/109532346)
 
-
-
 ## 15. [Deep Interest Evolution Network](https://arxiv.org/abs/1809.03672)
 
 * 简介：这是2019年阿里提出的模型， 是DIN模型的进化版本。
@@ -161,9 +159,19 @@
 
 * 链接：[AI上推荐 之 DSIN模型(阿里DIEN之上的再探索)](https://blog.csdn.net/wuzhongqiang/article/details/114500619)
 
-## 17. xDeepFM
+## 17. [xDeepFM](https://arxiv.org/abs/1803.05170)
 
+* 简介：这是2018年中科大联合微软在KDD上提出的一个模型， 是DCN的一个升级版本。
 
+* 内容：xDeepFM关注的重点依然是如何更好的学习特征之间的高阶交互作用，分析了之前DCN的Cross Network的不足，提出了一个新的网络CIN， 这个网络可以显性的学习特征之间的高阶交互，并且还是vector-wise级别的学习， 这个网络是xdeepFM的核心创新点。xDeepFM的模型架构依然采用的W&D的架构， CIN与DNN结合，可以同时学习高阶特征的显隐性交互。
+
+* 借鉴：
+  * 创新点就是CIN网络，而这个网络的设计也是非常的巧妙，在这里面也能看到RNN和CNN的身影
+  * 论文的构思感觉也是非常的清晰， 从Introduction-预备知识的介绍-模型-实验-相关工作-结论，感觉非常的完整
+  * 实验部分做的非常充分， 依然是先提出了三个问题，然后在这个基础上实验回答，并且给定了影响xdeepFM的几个重要超参数，并进行实验调参，确定了合理的值。
+  * 相关工作部分从大层面梳理了之前的模型。
+
+* 链接：[AI上推荐 之 xDeepFM模型(显隐性高阶特征交互的组合策略)](https://blog.csdn.net/wuzhongqiang/article/details/116379857)
 
 # 模型复现
 
