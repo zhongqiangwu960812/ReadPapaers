@@ -173,6 +173,13 @@
 
 * 链接：[AI上推荐 之 xDeepFM模型(显隐性高阶特征交互的组合策略)](https://blog.csdn.net/wuzhongqiang/article/details/116379857)
 
+## 18. YouTubeDNN
+
+* 简介：2016年YouTube工程师写的工业界的一篇经典好文
+* 内容: 从一个宏观的层面讲述了推荐系统架构， 介绍了召回模型和精排模型， 并且基于业务场景介绍了很多工程性的经验
+* 借鉴：这篇paper里面，主要是一些经验点， 非常重要， 这个具体总结到了博客里面
+* 链接: [AI上推荐 之 YouTubeDNN模型(工业界推荐系统的灯火阑珊)]([AI上推荐 之 YouTubeDNN模型(工业界推荐系统的灯火阑珊)_Miracle8070-CSDN博客](https://blog.csdn.net/wuzhongqiang/article/details/122671511?spm=1001.2014.3001.5501))
+
 # 模型复现
 
 大部分模型复现和详细的解释可以参考这个GitHub项目：[https://github.com/zhongqiangwu960812/AI-RecommenderSystem](https://github.com/zhongqiangwu960812/AI-RecommenderSystem)
